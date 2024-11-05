@@ -466,6 +466,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1769260009260389384, guid: 0c664fbd95fd8634ebb76ac61f828237, type: 3}
   m_PrefabInstance: {fileID: 1820538635}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &516187941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516187942}
+  m_Layer: 0
+  m_Name: CandyDestroyres
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &516187942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516187941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1116969480}
+  - {fileID: 1149840947}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &539994709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1769260009260389384, guid: 9094c7a4b596df348ab53996ad35bdb1, type: 3}
@@ -1409,7 +1442,7 @@ GameObject:
   - component: {fileID: 1116969479}
   - component: {fileID: 1116969478}
   m_Layer: 0
-  m_Name: CandyDestroyer
+  m_Name: CandyDestroyerReward0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,6 +1460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5a89fa3b6e1d440bbbc9e60f4832b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  candyManager: {fileID: 1602930253}
+  reward: 0
 --- !u!65 &1116969479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1456,13 +1491,81 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116969477}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7, z: -6}
-  m_LocalScale: {x: 17, y: 1, z: 12}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -7, z: -2.5}
+  m_LocalScale: {x: 17, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 516187942}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1149840946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149840947}
+  - component: {fileID: 1149840949}
+  - component: {fileID: 1149840948}
+  m_Layer: 0
+  m_Name: CandyDestroyerReward3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1149840947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149840946}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -7, z: -7.5}
+  m_LocalScale: {x: 17, y: 1, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 516187942}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1149840948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149840946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5a89fa3b6e1d440bbbc9e60f4832b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candyManager: {fileID: 1602930253}
+  reward: 3
+--- !u!65 &1149840949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149840946}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1217222708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,6 +2200,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1769260009260389384, guid: 9094c7a4b596df348ab53996ad35bdb1, type: 3}
   m_PrefabInstance: {fileID: 309769532}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1602930252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1602930254}
+  - component: {fileID: 1602930253}
+  m_Layer: 0
+  m_Name: CandyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1602930253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602930252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f864860934bf14b95958cb200568ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candy: 30
+--- !u!4 &1602930254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602930252}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605579891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,6 +2963,7 @@ MonoBehaviour:
   - {fileID: 1769260009260222504, guid: 7038257a396f661408de54ffc8b44fbd, type: 3}
   - {fileID: 1769260009260222504, guid: 0c664fbd95fd8634ebb76ac61f828237, type: 3}
   candyParentTransform: {fileID: 1487856507}
+  candyManager: {fileID: 1602930253}
   shotForce: 560
   shotTorque: 30
   baseWidth: 5
@@ -3085,4 +3234,5 @@ SceneRoots:
   - {fileID: 1219521174}
   - {fileID: 1487856507}
   - {fileID: 2022043885}
-  - {fileID: 1116969480}
+  - {fileID: 1602930254}
+  - {fileID: 516187942}
