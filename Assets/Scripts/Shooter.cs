@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    const int MaxShotPower = 5;
+    const int RecoverSeconds = 3;
+
+    int shotPower = MaxShotPower;
     public GameObject[] candyPrefabs;
     public Transform candyParentTransform;
     public CandyManager candyManager;
@@ -26,6 +30,7 @@ public class Shooter : MonoBehaviour
     }
     public void Shot(){
         if(candyManager.GetCandyAmount() <= 0) return;
+        if(shotPower <= 0) return;
         
         GameObject candy = Instantiate(
             SampleCandy(),//何を
@@ -40,6 +45,25 @@ public class Shooter : MonoBehaviour
 
         candyManager.ConsumeCandy();
 
+        ConsumePower();
 
+    }
+
+    void OnGUI(){
+        GUI.color=Color.black;
+        GUI.matrix=Matrix4x4.Scale(Vector3.one*2);
+        string label="";
+        for(int i=0;i<shotPower;i++) label = label+"+";
+        GUI.Label(new Rect(20,40,100,30),label);
+
+    }
+    void ConsumePower(){
+        shotPower--;
+        StartCoroutine(RecoverPower());
+
+    }
+    IEnumerator RecoverPower(){
+        yield return new WaitForSeconds(RecoverSeconds);
+        shotPower++;
     }
 }
