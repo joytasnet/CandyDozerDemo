@@ -8,6 +8,7 @@ public class CandyDestroyer : MonoBehaviour
     public int reward;
     public GameObject effectPrefab;
     public Vector3 effectRotation;
+    public EventManager em;
     void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Candy")){
             candyManager.AddCandy(reward);
@@ -18,6 +19,11 @@ public class CandyDestroyer : MonoBehaviour
                     other.transform.position,
                     Quaternion.Euler(effectRotation)
                 );
+            }
+        }
+        else if(other.CompareTag("Boots")){
+            if(em != null && !em.isMove){
+                StartCoroutine(em.BootsEvent());
             }
         }
         
